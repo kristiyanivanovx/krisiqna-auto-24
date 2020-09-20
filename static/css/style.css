@@ -531,6 +531,19 @@ figure {
   .carousel-caption {
     top: 43%;
   }
+  .carousel-caption h1 {
+    font-size: 260%;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 481px) {
+  .carousel-indicators {
+    visibility: hidden;
+    display: none;
+  }
+  .carousel-caption h1 {
+    font-size: 270%;
+  }
 }
 
 @media (max-width: 430px) {
