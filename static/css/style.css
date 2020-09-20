@@ -170,13 +170,6 @@ html, body {
 
 /* misc */
 
-.prizes, .tv, .sub-check {
-  height: auto; 
-  width: auto; 
-  max-width: 300px; 
-  max-height: 300px;
-}
-
 .w-85 {
   width: 85%;
 }
@@ -228,11 +221,6 @@ hr.bottom{
 }
 
 /* images  */
-
-#web-design, #software-support, #message-sent {
-  width: 50%; 
-  height: 50%;
-}
 
 #message-sent {
   width: 30%; 
@@ -371,55 +359,6 @@ figure {
 
 #bars {
   color: #38bce3;
-}
-
-.price-mini, .plan-mini {
-  font-size: 130%;
-  color:red;
-}
-
-.price-standard, .plan-standard {
-  font-size: 130%;
-  color:green;
-}
-
-.price-ultra {
-  font-size: 130%;
-  color:blue;
-}
-
-.internet-mini{
-  color: red;
-  text-shadow: 1px 1px 1px gray;
-  font-size: 130%;
-}
-
-.internet-standard {
-  color: green; 
-  text-shadow: 1px 1px 1px gray;
-  font-size: 130%;
-}
-
-.internet-ultra {
-  color: blue;
-  text-shadow: 1px 1px 1px gray;
-  font-size: 130%;
-  width: 125px;
-}
-
-.ultra-misc {
-  color: blue;
-  font-size: 110%;
-}
-
-.standart-misc{
-  color: green;
-  font-size: 110%;
-}
-
-.mini-misc{
-  color: red;
-  font-size: 110%;
 }
 
 /*---Media Queries --*/
