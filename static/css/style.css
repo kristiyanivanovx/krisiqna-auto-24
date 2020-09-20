@@ -441,6 +441,9 @@ figure {
     /* display: none; */
     visibility: hidden;
   } 
+  .carousel-caption {
+    top: 43%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -479,19 +482,19 @@ figure {
   }
 }
 
-@media (max-width: 576px) {
-  /*.carousel-indicators {*/
-    /* display: none; */
-    /* visibility: hidden; */
-  /*}  */
+@media (max-width: 650px) {
   #slides .btn-lg {
     visibility: hidden;
+    display: none;
+  }
+}
+
+/* @media (max-width: 576px) {
+  #slides .btn-lg {
+    display: inline-block;
   }
   .carousel-caption h1 {
     font-size: 250%;
-  }
-  .carousel-caption h3 {
-    font-size: 110%;
   }
   .carousel-caption .btn {
     font-size: 90%;
@@ -499,9 +502,6 @@ figure {
   }
   .carousel-caption {
     top: 36%;
-  }
-  .first-caption {
-    top: 44%;
   }
   .nav-item, .dropdown-item {
     font-size: 95%;
@@ -519,11 +519,21 @@ figure {
   .logo {
     width: 15%;
     height: 15%;
-    /* padding-left: .5rem; */
+
+  }
+} */
+
+@media (max-width: 510px) {
+  #slides .btn-lg {
+    visibility: hidden;
+    display: none;
+  }
+  .carousel-caption {
+    top: 43%;
   }
 }
 
-@media (max-width: 429px) {
+@media (max-width: 430px) {
   .spanOne, .spanTwo, .spanThree, .spanFour, .spanFive {
     visibility: hidden;
     display: none;
@@ -536,9 +546,18 @@ figure {
     visibility: hidden;
     display: none;
   }  
+  .logo {
+    width: 25%;
+    height: 25%;
+    /* padding-left: .5rem; */
+  }
+  .carousel-caption h1 {
+    font-size: 250%;
+  }
 }
-/* 
-@media (max-width: 320px) {
+/* @380 */
+
+@media (max-width: 390px) {
   #slides .btn-lg {
     visibility: hidden;
     display: none;
@@ -548,15 +567,18 @@ figure {
     display: none;
   }  
   .logo {
-    width: 30%;
-    height: 30%;
+    width: 26%;
+    height: 26%;
   }
   .carousel-caption {
-    top: 32%;
-  }
-  .first-caption {
     top: 40%;
   }
+  .carousel-caption h1 {
+    font-size: 220%;
+  }
+  /* .first-caption {
+    top: 40%;
+  } */
   .nav-item, .dropdown-item {
     font-size: 90%;
   }
@@ -568,7 +590,28 @@ figure {
     font-size: 1.9em;
     padding: .5rem;
   }
-} */
+}
+@media (max-width: 350px) {
+  .carousel-caption h1 {
+    font-size: 190%;
+  }
+  .carousel-caption {
+    top: 37%;
+  }
+}
+
+@media (max-width: 330px) {
+  .carousel-caption h1 {
+    font-size: 170%;
+  }
+  .carousel-caption {
+    top: 35%;
+  }
+  .second {
+    top: 40%;
+  }
+  
+}
 
 
 /*
