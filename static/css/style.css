@@ -71,7 +71,7 @@ html, body {
 
 /* buttons */
 
-.btn-primary{
+/* .btn-primary{
   background-color: #6648b1;
   border: 1px solid #6648b1;
 }
@@ -79,7 +79,7 @@ html, body {
 .btn-primary:hover{
   background-color: #563d7c;
   border: 1px solid #563d7c;
-}
+} */
 
 /* jumbotron */
 
@@ -187,7 +187,7 @@ html, body {
 
 .big {
   font-size: 1000%;
-  color: #38bce3;
+  color: #174958;
 }
 
 /* footer */
