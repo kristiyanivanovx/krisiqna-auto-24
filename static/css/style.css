@@ -528,15 +528,24 @@ figure {
     visibility: hidden;
     display: none;
   }
+  #slides .btn-lg {
+    visibility: hidden;
+    display: none;
+  }
+  .carousel-indicators {
+    visibility: hidden;
+    display: none;
+  }  
 }
-
+/* 
 @media (max-width: 320px) {
   #slides .btn-lg {
     visibility: hidden;
+    display: none;
   }
   .carousel-indicators {
-    /* display: none; */
     visibility: hidden;
+    display: none;
   }  
   .logo {
     width: 30%;
@@ -559,7 +568,7 @@ figure {
     font-size: 1.9em;
     padding: .5rem;
   }
-}
+} */
 
 
 /*
