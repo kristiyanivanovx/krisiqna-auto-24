@@ -531,8 +531,8 @@ figure {
       visibility: hidden;
     }  
     .logo {
-      width: 10%;
-      height: 10%;
+      width: 30%;
+      height: 30%;
     }
     .carousel-caption {
       top: 32%;
@@ -544,7 +544,8 @@ figure {
       font-size: 90%;
     }
     .spanOne, .spanTwo, .spanThree, .spanFour, .spanFive {
-      font-size: 30%;
+      visibility: hidden;
+      display: none;
     }
     .social a {
       font-size: 1.9em;
