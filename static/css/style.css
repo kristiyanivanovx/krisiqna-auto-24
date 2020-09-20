@@ -209,6 +209,10 @@ footer a {
   color: #e9e9e9;
 }
 
+.footer-bottom-text {
+  padding-top: .5rem;
+}
+
 hr.light-100{
   border-top: 1px solid #e9e9e9;
   width: 100%;
