@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="Description" content="Крисияна ауто 24 е регистрирана фирма, предлагаща различни услуги, свързани с поддръжка на автомобили- подмяна на части, гуми, джанти, двигатели. Предлагаме професионализъм и качествено обслужване." />
+	<meta name="Keywords" content="Крисияна, 24, ауто, сервиз, гуми, ремонт, автомобили, части, джанти, двигатели, МЕЖДУНАРОДНИ АВТОМОБИЛНИ ПРЕВОЗИ НА ПЪТНИЦИ И ТОВАРИ, МЕЖДУНАРОДНА И ВЪТРЕШНА СПЕДИЦИЯ, ПЛАСМЕНТНО- СНАБДИТЕЛНА ДЕЙНОСТ, ТРАНСПОРТНИ УСЛУГИ, ТАКСИМЕТРОВА ДЕЙНОСТ, АВТОСЕРВИЗ И ПЪТНА ПОМОЩ, ВЪТРЕШНО И ВЪНШНО ТЪРГОВСКА ДЕЙНОСТ, ЛОГИСТИКА, БАРТЕРНИ, РЕЕКСПОРТНИ И ДРУГИ СПЕЦИФИЧНИ ВЪНШНОТЪРГОВСКИ СДЕЛКИ, ВСИЧКИ ВИДОВЕ УСЛУГИ ЗА НАСЕЛЕНИЕТО, ТЪРГОВСКО ПРЕДСТАВИТЕЛСТВО НА БЪЛГАРСКИ И ЧУЖДЕСТРАННИ ЮРИДИЧЕСКИ И ФИЗИЧЕСКИ ЛИЦА, ВНОС, ИЗНОС НА ЛЕКИ АВТОМОБИЛИ, АВТОРЕМОНТНА ДЕЙНОСТ, ВНОС, МОНТАЖ, ДЕМОНТАЖ И БАЛАНС НА ГУМИ И АВТОЧАСТИ ЗА ЛЕКИ И ТОВАРНИ АВТОМОБИЛИ, АГЕНТСТВО И ПОСРЕДНИЧЕСТВО, ВЪТРЕШНА И ВЪНШНА ТЪРГОВИЯ, СКЛАДОВА ДЕЙНОСТ С ОГЛЕД ДЕЙНОСТТА, ТУРИСТИЧЕСКА ДЕЙНОСТ, ХОТЕЛИЕРСТВО И РЕСТОРАНТЬОРСТВО, ПАЗАРНИ ПРОУЧВАНИЯ, ИНФОРМАЦИОННА И РЕКЛАМНА ДЕЙНОСТ" />
+	<title>{% block title %}{% endblock %}</title>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+	<link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+	<link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+	<script src="https://kit.fontawesome.com/c952ac5cde.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+
+<!-- Navigation-->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+	<a class="navbar-brand" href="{{ url_for('home') }}">
+	
+	<img class="logo" src="{{ url_for('static', filename='img/favicon.png') }}">&nbsp;
+	<span class="spanOne">К</span><span class="spanTwo">ри<span class="spanOne">с</span>ияна</span>
+	<span class="spanThree">А</span><span class="spanFour">уто&nbsp;24</span></a>
+
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+	  <i id="bars" class="fa fa-bars"></i>
+	</button>
+  
+	<div class="collapse navbar-collapse" id="navbarNavDropdown">
+	  <ul class="navbar-nav ml-auto">
+		<li class="nav-item {{ 'active' if active_page == 'home' }}">
+			<a class="nav-link" href="{{ url_for('home') }}">Начало</a>
+		</li>
+		<li class="nav-item {{ 'active' if active_page == 'history' }}">
+			<a class="nav-link" href="{{ url_for('history') }}">За нас</a>
+		</li>
+		<li class="nav-item {{ 'active' if active_page == 'services' }}">
+			<a class="nav-link" href="{{ url_for('services') }}">Услуги</a>
+		</li>
+		<li class="nav-item {{ 'active' if active_page == 'prices' }}">
+			<a class="nav-link" href="{{ url_for('prices') }}">Цени</a>
+		</li>
+		<li class="nav-item {{ 'active' if active_page == 'contacts' }}">
+			<a class="nav-link" href="{{ url_for('contacts') }}">Контакти</a> 
+		</li>
+		<li class="nav-item {{ 'active' if active_page == 'terms_and_conditions' }}">
+			<a class="nav-link" href="{{ url_for('terms_and_conditions') }}">Общи условия</a> 
+		</li>
+	  </ul>
+	</div>
+  </nav>
+
+<!--- Main page -->
+
+{% block body %}
+{% endblock %}
+
+<!-- Footer -->
+
+<footer>
+<div class="container-fluid padding">
+<div class="row text-center">
+	<div class="col-xl-12">
+		<h5>Гулянци</h5>
+		<hr class="bottom">
+		<p>офис и сервиз</p>
+		<p>ул. Христо Ботев 2</p>
+		<p>тел. 089 530 8001</p>
+		<p><a href="mailto:ivanstanievivanov@gmail.com">ivanstanievivanov@gmail.com</a></p>
+	</div>
+</div>
+</div>
+<div class="col-12 text-center padding">
+	<hr class="light-100">
+	<h5>&copy; 2020. Крисияна ауто 24 ЕООД. Всички права запазени.</h5>
+</div>
+
+</footer>
+<!-- scripts -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

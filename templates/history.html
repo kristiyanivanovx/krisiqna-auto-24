@@ -1,0 +1,41 @@
+{% set active_page = "history" %}
+
+{% extends "layout.html" %}
+{% block title %}
+	Крисияна ауто 24 :: За нас
+{% endblock %}
+{% block body %}
+
+<div class="container-fluid padding">
+<div class="row text-center">
+<div class="eight-five">
+	<div class="col-12">
+		<h1 class="display-4">История</h1>
+		<hr><br>
+			<img class="image car-50" src="{{ url_for('static', filename='img/car-history.jpg') }}">
+		<br>
+	</div>
+	<div class="col-12">
+		<div class="text">
+		<p>
+			Крисияна Ауто 24 ЕООД е регистрирана на 24 януари 2018 година от Иван Станиев Иванов. 
+		</p>
+		<p>
+			От създаването й до сега винаги сме се старали постоянно да вдигаме качеството на всички предлагани от нас услуги.
+		</p>
+		<p>
+			Занимаваме се с поддръжка на автомобили- подмяна на всякякви части, гуми, джанти, двигатели. 
+		</p>
+		<p>
+			Професионализъм и качествено обслужване са другите ни имена.
+		</p>
+		<br>
+		<br>
+		<br>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+
+{% endblock %}

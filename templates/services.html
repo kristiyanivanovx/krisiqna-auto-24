@@ -1,0 +1,32 @@
+{% set active_page = "services" %}
+
+{% extends "layout.html" %}
+{% block title %}
+	Крисияна ауто 24 :: Услуги
+{% endblock %}
+{% block body %}
+
+<div class="container-fluid padding">
+<div class="row text-center">
+<div class="eight-five">
+	<div class="col-12">
+		<h1 class="display-4">Услуги</h1>
+		<hr><br>
+			<img class="image car-50" src="{{ url_for('static', filename='img/services.jpg') }}">
+		<br>
+	</div>
+	<div class="col-12">
+		<div class="text">
+			<p>	
+				Поддръжка на автомобили. Подмяна на всякякви части, гуми, джанти, двигатели. 
+			</p>
+			<p>
+				Обадете се на <b>089 530 8001</b> за повече информация.
+			</p>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+
+{% endblock %}
