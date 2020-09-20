@@ -17,7 +17,7 @@ html, body {
 }
 
 .active a, .subscription, .orange {
-  color: #38bce3!important;
+  color: #38bce3 !important;
 }
 
 #active {
@@ -169,6 +169,9 @@ html, body {
 }
 
 /* misc */
+.highlight {
+  color: #007bff;
+}
 
 .w-85 {
   width: 85%;
