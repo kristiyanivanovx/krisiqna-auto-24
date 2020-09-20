@@ -421,7 +421,7 @@ figure {
 /*---Media Queries --*/
 
 @media (max-width: 992px) { 
-  .spanOne, .spanTwo, .spanThree, .spanFour {
+  .spanOne, .spanTwo, .spanThree, .spanFour, .spanFive {
     font-size: 120%;
   }
   .social a {
@@ -462,7 +462,7 @@ figure {
   .carousel-caption {
     top: 45%;
   }
-  .spanOne, .spanTwo, .spanThree, .spanFour {
+  .spanOne, .spanTwo, .spanThree, .spanFour, .spanFive {
     font-size: 90%;
   }
   .social a {
@@ -506,7 +506,7 @@ figure {
   .nav-item, .dropdown-item {
     font-size: 95%;
   }
-  .spanOne, .spanTwo, .spanThree, .spanFour {
+  .spanOne, .spanTwo, .spanThree, .spanFour, .spanFive {
     font-size: 75%;
   }
   .social a {
@@ -543,8 +543,8 @@ figure {
     .nav-item, .dropdown-item {
       font-size: 90%;
     }
-    .spanOne, .spanTwo, .spanThree, .spanFour {
-      font-size: 56%;
+    .spanOne, .spanTwo, .spanThree, .spanFour, .spanFive {
+      font-size: 50%;
     }
     .social a {
       font-size: 1.9em;
