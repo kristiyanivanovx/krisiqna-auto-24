@@ -523,7 +523,7 @@ figure {
   }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 429px) {
   .spanOne, .spanTwo, .spanThree, .spanFour, .spanFive {
     visibility: hidden;
     display: none;
