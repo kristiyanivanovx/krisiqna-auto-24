@@ -305,8 +305,8 @@ form input#submit:hover{
 /* Message flashing */
 .flash {
   background-color: #FBB0B0;
-  padding: 1rem;
-  width: 40%;
+  padding: .5rem;
+  width: 100%;
 }
 
 /*--- Fixed Background Image --*/
@@ -317,6 +317,7 @@ figure {
   height: 60%;
   margin: 0 !important;
 }
+
 .fixed-wrap {
   clip: rect(0, auto, auto, 0);
   position: absolute;
