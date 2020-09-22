@@ -16,7 +16,7 @@ html, body {
   /* padding-left: .5rem; */
 }
 
-.active a, .subscription, .orange {
+.active a, .subscription {
   color: #38bce3 !important;
 }
 
@@ -130,19 +130,19 @@ html, body {
 /* three column section */
 
 .fa-clock{
-  color:#e54d26;
+  color: #e54d26;
   font-size: 3.5em;
   margin: 1.8rem;
 }
 
 .fa-coins{
-  color:#563d7c;
+  color: #563d7c;
   font-size: 3.5em;
   margin: 1.8rem;
 }
 
 #three-columns .fa-phone{
-  color:#2163af;
+  color: #2163af;
   font-size: 3.5em;
   margin: 1.8rem;
 }
@@ -305,8 +305,8 @@ form input#submit:hover{
 /* Message flashing */
 .flash {
   background-color: #FBB0B0;
-  padding: 10px;
-  width: 400px;
+  padding: 1rem;
+  width: 40%;
 }
 
 /*--- Fixed Background Image --*/
