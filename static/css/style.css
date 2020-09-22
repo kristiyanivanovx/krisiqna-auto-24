@@ -17,11 +17,11 @@ html, body {
 }
 
 .active a, .subscription, .orange {
-  color: #174958 !important;
+  color: #38bce3 !important;
 }
 
 #active {
-  color: #174958 !important;
+  color: #38bce3 !important;
 }
 
 /* navbar */
@@ -348,15 +348,15 @@ figure {
 /* spans and bars, colors */
 
 .spanTwo, .spanFour {
-  color: #747272;
+  color: rgb(116, 114, 114);
 }
 
 .spanOne, .spanThree, .spanFive {
-  color: #174958;
+  color: #38bce3;
 }
 
 #bars {
-  color: #174958;
+  color: #38bce3;
 }
 
 /*---Media Queries --*/
@@ -524,7 +524,6 @@ figure {
     font-size: 250%;
   }
 }
-
 /* @380 */
 
 @media (max-width: 390px) {
@@ -561,7 +560,6 @@ figure {
     padding: .5rem;
   }
 }
-
 @media (max-width: 350px) {
   .carousel-caption h1 {
     font-size: 190%;
