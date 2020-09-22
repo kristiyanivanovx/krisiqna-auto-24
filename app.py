@@ -26,7 +26,7 @@ app.config['SECRET_KEY'] = creds.secret_key
 # app.config["MAIL_SERVER"] = "appssmtp.abv.bg" # abv
 # app.config["MAIL_PORT"] = 465 # 465 for SSL - abv
 
-# elastice
+# elastice mail
 
 app.config["MAIL_SERVER"] = "smtp.elasticemail.com"
 app.config["MAIL_PORT"] = 2525
