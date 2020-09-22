@@ -20,11 +20,16 @@ app.config['SECRET_KEY'] = creds.secret_key
 # app.config["MAIL_SERVER"] = "smtp.mail.bg" # mail bg
 # app.config["MAIL_PORT"] = 465 # mail bg
 
-app.config["MAIL_SERVER"] = "smtp.gmail.com" # Google
-app.config["MAIL_PORT"] = 587 # 465 for SSL - Google
+# app.config["MAIL_SERVER"] = "smtp.gmail.com" # Google
+# app.config["MAIL_PORT"] = 587 # 465 for SSL - Google
 
 # app.config["MAIL_SERVER"] = "appssmtp.abv.bg" # abv
 # app.config["MAIL_PORT"] = 465 # 465 for SSL - abv
+
+# elastice
+
+app.config["MAIL_SERVER"] = "smtp.elasticemail.com"
+app.config["MAIL_PORT"] = 2525
 
 app.config["MAIL_SUPPRESS_SEND"] = False
 app.config["MAIL_USE_SSL"] = False
@@ -49,6 +54,9 @@ def contacts():
 			msg = Message(form.subject.data, sender=creds.username, recipients=['georgi.asparuhov.2020@abv.bg'])
 			msg.body = """
 			От: %s \nE-mail: %s\nСъобщение: %s
+			\n
+			Сайт: Крисияна Ауто 24
+			------------------------------------------------------------------
 			""" % (form.name.data, form.email.data, form.message.data)
 			mail.send(msg)
 			
