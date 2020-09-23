@@ -582,6 +582,21 @@ figure {
   }
 }
 
+/* scrollbar */
+
+body::-webkit-scrollbar {
+  width: 0.3rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #dbdbdb;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #174958;
+}
+  
+
 
 /*
 Extra small (xs) devices (portrait phones, less than 576px)
