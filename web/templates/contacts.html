@@ -1,0 +1,86 @@
+{% extends "layout.html" %}
+
+{% block title %}
+	Крисияна Ауто 24 :: Контакти
+{% endblock %}
+
+{% set active_page = "contacts" %}
+
+{% block body %}
+    <div class="container-fluid padding">
+    <div class="row text-center">
+    <div class="eight-five">
+        <div class="col-12">
+            <h1 class="display-4">Контакти</h1>
+            <hr>
+        </div>
+        <div class="col-12">
+        <div class="text">
+            <p>
+                Ще ни намерите на адрес:
+            </p>
+            <p>
+                град <b class="highlight">Гулянци</b>
+            </p>
+            <p>
+                улица <b class="highlight">Васил Левски, 31а</b>
+            </p>
+            <p>
+                тел. <b><a class="highlight" href="tel:0895308001">089 530 8001</a></b>
+            </p><p>
+                Е-mail: <b><a href="mailto:ivanstanievivanov@gmail.com">ivanstanievivanov@gmail.com</a></b>
+            </p><p>
+                Не се колебайте да се свържете с нас, ако имате въпроси, предложения, критики или забележки.
+            </p><p>
+                Вашето мнение е много важно за нас и затова Ви благодарим предварително за отделеното време и усилие.
+            </p>
+
+            <br>
+            <div class="col-12">
+                <h1 class="display-4">Връзка с нас</h1><hr>
+            </div>
+
+            {% for message in form.name.errors %}
+                <div class="flash">{{ message }}</div>
+            {% endfor %}
+
+            {% for message in form.email.errors %}
+                <div class="flash">{{ message }}</div>
+            {% endfor %}
+
+            {% for message in form.subject.errors %}
+                <div class="flash">{{ message }}</div>
+            {% endfor %}
+
+            {% for message in form.message.errors %}
+                <div class="flash">{{ message }}</div>
+            {% endfor %}
+
+            <form action="{{ url_for('contacts') }}" method="POST">
+
+                {{ form.hidden_tag() }}
+
+                <div class="d-flex justify-content-center">{{ form.name.label }}</div>
+
+                <div class="d-flex justify-content-center">{{ form.name }}</div>
+
+                <div class="d-flex justify-content-center">{{ form.email.label }}</div>
+                <div class="d-flex justify-content-center">{{ form.email }}</div>
+
+                <div class="d-flex justify-content-center">{{ form.subject.label }}</div>
+                <div class="d-flex justify-content-center">{{ form.subject }}</div>
+
+                <div class="d-flex justify-content-center">{{ form.message.label }}</div>
+                <div class="d-flex justify-content-center">{{ form.message }}</div>
+            <br>
+                <div class="d-flex justify-content-center">{{ form.submit }}</div>
+            </form>
+        </div>
+        </div>
+    </div>
+    </div>
+    </div>
+{% endblock %}
+
+
+

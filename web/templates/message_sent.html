@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% set active_page = "message_sent" %}
+
+{% block title %}
+	Крисияна Ауто 24 :: Съобщението е изпратено
+{% endblock %}
+
+{% block body %}
+    <div class="container-fluid padding">
+    <div class="row text-center">
+    <div class="eight-five">
+        <div class="col-12">
+            <h1 class="display-4">Съобщението е изпратено</h1>
+            <hr>
+            <br>
+                <img class="image margin-bottom" id="message-sent" src="{{ url_for('static', filename='img/167-512.png') }}">
+            <hr>
+        </div>
+        <div class="col-12">
+            <div class="text">
+                <div class="alert alert-success" role="alert">
+                    Благодарим за съобщението ви, ще се свържем с вас при първа възможност.
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+{% endblock %}

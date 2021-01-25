@@ -138,4 +138,4 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 .vscode/settings.json
-static/js/all-1292429061.js
+web/static/js/all-1292429061.js
