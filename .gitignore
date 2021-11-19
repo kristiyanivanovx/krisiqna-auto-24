@@ -139,4 +139,5 @@ dmypy.json
 cython_debug/
 .vscode/settings.json
 web/static/js/all-1292429061.js
-venv.txt
+notes.md
+.idea

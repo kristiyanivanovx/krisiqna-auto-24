@@ -20,6 +20,7 @@ mccabe==0.6.1
 pycparser==2.20
 pylint==2.6.0
 pyOpenSSL==19.1.0
+python-dotenv==0.19.2
 six==1.15.0
 toml==0.10.1
 typed-ast==1.4.1

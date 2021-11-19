@@ -2,49 +2,31 @@ from flask import Flask, render_template, url_for, flash, request, redirect
 from flask_wtf import FlaskForm
 from forms import ContactForm
 from flask_mail import Message, Mail
+from dotenv import load_dotenv
 import os
-import creds
 
-# mail 
+load_dotenv()
 
 mail = Mail()
-
-# app
 
 app = Flask(__name__,
             static_url_path='',
             static_folder='web/static',
             template_folder='web/templates')
 
-app.config['SECRET_KEY'] = creds.secret_key
+app.config['SECRET_KEY'] = os.urandom(16)
 
-# mail
-
-# app.config["MAIL_SERVER"] = "smtp.mail.bg" # mail bg
-# app.config["MAIL_PORT"] = 465 # mail bg
-
-# app.config["MAIL_SERVER"] = "smtp.gmail.com" # Google
-# app.config["MAIL_PORT"] = 587 # 465 for SSL - Google
-
-# app.config["MAIL_SERVER"] = "appssmtp.abv.bg" # abv
-# app.config["MAIL_PORT"] = 465 # 465 for SSL - abv
-
-# elastic email
-
-app.config["MAIL_SERVER"] = "smtp.elasticemail.com"
-app.config["MAIL_PORT"] = 2525
+app.config["MAIL_SERVER"] = os.getenv('MAIL_SERVER')
+app.config["MAIL_PORT"] = os.getenv('MAIL_PORT')
 
 app.config["MAIL_SUPPRESS_SEND"] = False
 app.config["MAIL_USE_SSL"] = False
 app.config["MAIL_USE_TLS"] = True
 
-app.config["MAIL_USERNAME"] = creds.username
-app.config["MAIL_PASSWORD"] = creds.password
+app.config["MAIL_USERNAME"] = os.getenv('ELASTIC_EMAIL_USERNAME')
+app.config["MAIL_PASSWORD"] = os.getenv('ELASTIC_EMAIL_PASSWORD')
 
 mail.init_app(app)
-
-
-# handle forms
 
 
 @app.route('/contacts', methods=('GET', 'POST'))
@@ -56,11 +38,17 @@ def contacts():
             flash('Моля, попълнете всички полета.')
             return render_template('contacts.html', form=form)
         else:
-            msg = Message(form.subject.data, sender=creds.username, recipients=['georgi.asparuhov.2020@abv.bg'])
-            msg.body = """От: %s \nE-mail: %s\nСъобщение: %s\nСайт: Крисияна Ауто 24 
-            ------------------------------------------------------------------
-            """ % (form.name.data, form.email.data, form.message.data)
-            mail.send(msg)
+            try:
+                msg = Message(
+                    form.subject.data,
+                    sender=os.getenv('ELASTIC_EMAIL_USERNAME'),
+                    recipients=[os.getenv('MAIL_RECIPIENT')])
+                msg.body = """От: %s \nE-mail: %s\nСъобщение: %s\nСайт: Крисияна Ауто 24\n
+                ------------------------------------------------------------------
+                """ % (form.name.data, form.email.data, form.message.data)
+                mail.send(msg)
+            except Exception as e:
+                print(e.message)
 
             return render_template("message_sent.html")
 
@@ -68,15 +56,9 @@ def contacts():
         return render_template('contacts.html', form=form)
 
 
-# handle 404 error
-
-
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html'), 404
-
-
-# handle app routes/pages
 
 
 @app.route("/")
@@ -106,4 +88,5 @@ def terms_and_conditions():
 
 if __name__ == '__main__':
     app.run()
-    # app.run(ssl_context='adhoc')
+#     app.run(debug=True)
+#     app.run(ssl_context='adhoc')
